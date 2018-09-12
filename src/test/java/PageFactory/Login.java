@@ -19,18 +19,13 @@ public class Login extends Basedriver
 	By password=By.id("edit_text_password");
 	
 	By lgnBtn=By.id("button_sign_in");
-	
 
-	By dashBoard = By.id("dasBordId");
+	By noThanks=By.id("button_google_deny");
 
-	By search = By.id("search_box");
+	By dashBoard = By.id("search_box");
 
-	By searchfiled = By.id("search_src_text");
 
-	By results = By.id("textview_item_name");
 
-	By addCart = By.id("button_add_to_cart");
-	
 	
 	 
 	public Login(AndroidDriver<MobileElement> driver)
@@ -50,12 +45,7 @@ public class Login extends Basedriver
 		return img;
 	}
 
-	public MobileElement searchIcon()
-	{
-		MobileElement icon=(MobileElement) driver.findElement(search);
-		return icon;
-	}
-	
+
 	public MobileElement userNameTextBox()
 	{
 		MobileElement usrNameTextBox=(MobileElement) driver.findElement(usrName);
@@ -77,26 +67,15 @@ public class Login extends Basedriver
 	}
 	public MobileElement homePage()
 	{
-		MobileElement lgnButton=(MobileElement) driver.findElement(dashBoard);
-		return lgnButton;
+		MobileElement dasboard=(MobileElement) driver.findElement(dashBoard);
+		return dasboard;
 	}
 
-	public MobileElement searchFiled()
+	public MobileElement noThanksBtn()
 	{
-		MobileElement field=(MobileElement) driver.findElement(searchfiled);
-		return field;
+		MobileElement btn=(MobileElement) driver.findElement(noThanks);
+		return btn;
 	}
 
-	public List<MobileElement> searchResults()
-	{
-		List<MobileElement> fields=(List<MobileElement>) driver.findElement(results);
-		return fields;
-	}
 
-	public MobileElement addToCartBtn()
-	{
-		MobileElement field=(MobileElement) driver.findElement(addCart);
-		return field;
-	}
-	
 }
