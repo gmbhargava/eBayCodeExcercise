@@ -20,7 +20,7 @@ public class Login extends Basedriver
 	
 	By lgnBtn=By.id("button_sign_in");
 
-	By noThanks=By.id("button_google_deny");
+	By noThanks=By.xpath("//android.widget.Button[contains(@id,'button_google_deny')]");
 
 	By dashBoard = By.id("search_box");
 

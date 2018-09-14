@@ -12,26 +12,17 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.security.SecureRandom;
-import java.time.Duration;
+import java.time.*;
 import java.util.HashMap;
 import java.util.Properties;
 
 import io.appium.java_client.android.AndroidDriver;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
 
-import PageFactory.Login;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class commonUtil {
@@ -45,35 +36,10 @@ public class commonUtil {
 	public static AndroidDriver driver;
 	public static URL url;
 	public static String SERVER;
-	public static String propertyFile = "config.properties";
 	public static String USERNAME;
 	public static ExtentReports extent;
 	public static String NO_RESET;
-	
 
-
-
-	public static void verticalSwipe(double startPercentage, double finalPercentage) {
-
-		Dimension size = driver.manage().window().getSize();
-		int width = size.width / 2;
-		int start = (int) (size.getHeight() * startPercentage);
-		int endPoint = (int) (size.getHeight() * finalPercentage);
-		new TouchAction(driver).press(width, start).waitAction(Duration.ofMillis(500)).moveTo(width, endPoint).release()
-				.perform();
-
-	}
-
-	public static void HorizontalSwipe(double from, double to, double length) {
-		Dimension size = driver.manage().window().getSize();
-		int height = size.getHeight();
-		int width = size.getWidth();
-		int y = (int) (height * length);
-		int start = (int) (width * from);
-		int end = (int) (width * to);
-		new TouchAction(driver).press(start, y).waitAction(Duration.ofMillis(500)).moveTo(end, y).release().perform();
-	}
-	
 	public static void swipeUntilElementFound(MobileElement element){
 		while(!element.isDisplayed()){
 			swipeDown();
@@ -113,7 +79,8 @@ public class commonUtil {
 		DEVICE_NAME = property.getProperty("device.name");
 		APP =System.getProperty("user.dir")+property.getProperty("app");
 		NO_RESET = property.getProperty("noReset");
-		SERVER = property.getProperty("server.url");
+		SERVER ="http://127.0.0.1:4723/wd/hub";
+				//property.getProperty("server.url");
 		USERNAME = property.getProperty("userName");
 
 	}
@@ -136,7 +103,7 @@ public class commonUtil {
 		capabilities.setCapability(MobileCapabilityType.APP, commonUtil.APP);
 		capabilities.setCapability("appPackage", "com.ebay.mobile");
 		capabilities.setCapability("appActivity", "com.ebay.mobile.activities.MainActivity");
-		capabilities.setCapability("automationName","UiAutomator2");
+		//capabilities.setCapability("automationName","UiAutomator2");
 		capabilities.setCapability(MobileCapabilityType.NO_RESET, commonUtil.NO_RESET);
 
 	}
@@ -144,8 +111,10 @@ public class commonUtil {
 
 
 	public static AndroidDriver getDriver() throws MalformedURLException {
-		url = new URL(commonUtil.SERVER);
-		driver = new AndroidDriver(new URL(commonUtil.SERVER), capabilities);
+		url = new URL("http://127.0.0.1:4723/wd/hub");
+		//driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+
 		return driver;
 
 	}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+    <line>
+      <![CDATA[User logged int Ebay app succesfully As Expected]]>
+    </line>
+    <line>
+      <![CDATA[ Search results 6 displayed As Expected]]>
+    </line>
+    <line>
+      <![CDATA[Results displayed As Expected]]>
+    </line>
+    <line>
+      <![CDATA[Item Added to the cart As Expected]]>
+    </line>
+    <line>
+      <![CDATA[Cart items displayed As Expected]]>
+    </line>
+    <line>
+      <![CDATA[Item Added to the cart As Expected]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="43654" started-at="2018-09-14T11:38:04Z" finished-at="2018-09-14T11:38:47Z">
+    <groups>
+      <group name="Regression">
+        <method signature="AddToCartTest.loginTest()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="loginTest" class="com.mobile.Testcases.AddToCartTest"/>
+        <method signature="AddToCartTest.searchItem()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="searchItem" class="com.mobile.Testcases.AddToCartTest"/>
+        <method signature="AddToCartTest.verifyCart()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="verifyCart" class="com.mobile.Testcases.AddToCartTest"/>
+      </group> <!-- Regression -->
+      <group name="smokeTest">
+        <method signature="AddToCartTest.loginTest()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="loginTest" class="com.mobile.Testcases.AddToCartTest"/>
+        <method signature="AddToCartTest.searchItem()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="searchItem" class="com.mobile.Testcases.AddToCartTest"/>
+        <method signature="AddToCartTest.verifyCart()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="verifyCart" class="com.mobile.Testcases.AddToCartTest"/>
+      </group> <!-- smokeTest -->
+    </groups>
+    <test name="Default test" duration-ms="43654" started-at="2018-09-14T11:38:04Z" finished-at="2018-09-14T11:38:47Z">
+      <class name="com.mobile.Testcases.AddToCartTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="setup" is-config="true" duration-ms="25601" started-at="2018-09-14T17:07:38Z" finished-at="2018-09-14T17:08:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="loginTest" duration-ms="36007" started-at="2018-09-14T17:08:04Z" finished-at="2018-09-14T17:08:40Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User logged int Ebay app succesfully As Expected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="searchItem()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="searchItem" duration-ms="7591" started-at="2018-09-14T17:08:40Z" finished-at="2018-09-14T17:08:47Z">
+          <reporter-output>
+            <line>
+              <![CDATA[ Search results 6 displayed As Expected]]>
+            </line>
+            <line>
+              <![CDATA[Results displayed As Expected]]>
+            </line>
+            <line>
+              <![CDATA[Item Added to the cart As Expected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchItem -->
+        <test-method status="PASS" signature="verifyCart()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="verifyCart" duration-ms="3" started-at="2018-09-14T17:08:47Z" finished-at="2018-09-14T17:08:47Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Cart items displayed As Expected]]>
+            </line>
+            <line>
+              <![CDATA[Item Added to the cart As Expected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCart -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mobile.Testcases.AddToCartTest@5702b3b1]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-09-14T17:08:48Z" finished-at="2018-09-14T17:08:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.mobile.Testcases.AddToCartTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
