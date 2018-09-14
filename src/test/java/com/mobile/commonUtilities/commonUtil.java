@@ -64,13 +64,9 @@ public class commonUtil {
 
 	}
 	
-	
-	
-	
-
 	public static void loadConfig(String fileName) throws IOException {
 		FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir") + "/src/test/resources/Properties/" + fileName);
+		System.getProperty("user.dir") + "/src/test/resources/Properties/" + fileName);
 		property.load(fis);
 		PLATFORM_NAME = property.getProperty("platformName");
 		System.out.println(PLATFORM_NAME);
